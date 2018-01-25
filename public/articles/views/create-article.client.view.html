@@ -1,0 +1,51 @@
+<!-- The create article view -->
+<section data-ng-controller="ArticlesController">
+	<div ng-include="'lib/partial/menu.html'"></div>
+
+	<div class="container menuTop">
+	<div class="row">
+	    <div class="col-md-8 col-md-offset-2">
+
+    		<h1>Create post</h1>
+
+				<form data-ng-submit="create()" novalidate>
+
+    		    <div class="form-group">
+    		        <label for="title">Title <span class="require">*</span></label>
+								<input type="text" data-ng-model="title" id="title" class="form-control" required>
+    		    </div>
+						<div class="form-group">
+								<label for="latitude">Latitude</label>
+								<input type="text" data-ng-model="latitude" class="form-control" id="latitude">
+						</div>
+						<div class="form-group">
+								<label for="longitude">Longitude</label>
+								<input type="text" data-ng-model="longitude" class="form-control" id="longitude" >
+						</div>
+    		    <div class="form-group">
+    		        <label for="description">Description</label>
+								<textarea data-ng-model="content" id="content" class="form-control" cols="30" rows="10"></textarea>
+					 </div>
+
+    		    <div class="form-group">
+    		        <p><span class="require">*</span> - required fields</p>
+    		    </div>
+
+    		    <div class="form-group">
+    		        <button type="submit" class="btn btn-primary">
+    		            Create
+    		        </button>
+    		        <button class="btn btn-default">
+    		            Cancel
+    		        </button>
+    		    </div>
+						<!-- The error message element -->
+						<div data-ng-show="error">
+							<strong data-ng-bind="error"></strong>
+						</div>
+    		</form>
+		</div>
+
+	</div>
+</div>
+</section>
