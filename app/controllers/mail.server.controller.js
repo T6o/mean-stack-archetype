@@ -4,7 +4,6 @@
 var nodemailer = require('nodemailer');
 const sgMail = require('@sendgrid/mail');
 var config = require('../../config/config')
-//sgMail.setApiKey("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");
 sgMail.setApiKey(config.sgMail);
 
 // Create a new 'render' controller method
